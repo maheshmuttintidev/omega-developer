@@ -3,7 +3,7 @@ import express from "express";
 import { Transform } from "node:stream";
 
 // Constants
-const isProduction = false;
+const isProduction = true;
 const port = 5173;
 const base = "/";
 const ABORT_DELAY = 10000;
