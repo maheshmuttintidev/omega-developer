@@ -3,7 +3,7 @@ import Banner from "./banner.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-4 p-3">
+    <main className="container mx-auto p-3">
       <h1 className="h1">
         <BigLetter letter="O" />
         mega <BigLetter letter="D" />
@@ -13,7 +13,7 @@ export default function Home() {
         eb <BigLetter letter="D" />
         eveloper
       </h1>
-      <ul className="flex gap-10">
+      <ul className="flex gap-x-10 gap-y-3 flex-wrap">
         <li className="list-disc">Anime</li>
         <li className="list-disc">React</li>
         <li className="list-disc">React Native</li>
@@ -26,7 +26,6 @@ export default function Home() {
         className="object-contain"
         alt="Omega Developer Banner Image"
       />
-      
     </main>
   );
 }
