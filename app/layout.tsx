@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Omega Developer - Full Stack Web Developer",
   description:
     "Omega Developer is none other than Mahesh Muttinti, He will share the youtube videos related to the Anime, React, React Native, Node Js, MongoDB, Postgresql, and more interesting contents.",
-  metadataBase: new URL("https://omage-developer.maheshmuttintidev.in"),
+  metadataBase: new URL("https://omega-developer.maheshmuttintidev.in"),
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://omega-developer.maheshmuttintidev.in/open-graph-image.png",
-        width: 1920,
-        height: 1080,
+        width: 1200,
+        height: 630,
         alt: "Banner Image",
       },
     ],
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://omega-developer.maheshmuttintidev.in/banner.png",
-        width: 1920,
-        height: 1080,
+        width: 1200,
+        height: 630,
         alt: "Banner Image",
       },
     ],
