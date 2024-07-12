@@ -3,8 +3,8 @@ import Banner from "./banner.png";
 
 export default function Home() {
   return (
-    <main className="container mx-auto p-3">
-      <h1 className="h1">
+    <main className="container mx-auto p-3 flex flex-col gap-4 items-center justify-center">
+      <h1 className="h1 text-center">
         <BigLetter letter="O" />
         mega <BigLetter letter="D" />
         eveloper <u>aka</u> <BigLetter letter="F" />
@@ -13,7 +13,7 @@ export default function Home() {
         eb <BigLetter letter="D" />
         eveloper
       </h1>
-      <ul className="flex gap-x-10 gap-y-3 flex-wrap">
+      <ul className="flex gap-x-10 gap-y-3 flex-wrap justify-center p">
         <li className="list-disc">Anime</li>
         <li className="list-disc">React</li>
         <li className="list-disc">React Native</li>
