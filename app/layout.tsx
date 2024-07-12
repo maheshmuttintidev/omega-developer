@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://omega-developer.maheshmuttintidev.in/banner.png",
+        url: "https://omega-developer.maheshmuttintidev.in/open-graph-image.png",
         width: 1920,
         height: 1080,
         alt: "Banner Image",
