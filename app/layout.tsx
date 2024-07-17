@@ -30,9 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://omega-developer.maheshmuttintidev.in/open-graph-image.png",
-        width: 1200,
-        height: 630,
+        url: "https://omega-developer.maheshmuttintidev.in/open-graph-image.webp",
         alt: "Banner Image",
       },
     ],
@@ -45,9 +43,7 @@ export const metadata: Metadata = {
     creator: "@MaheshMuttinti",
     images: [
       {
-        url: "https://omega-developer.maheshmuttintidev.in/banner.png",
-        width: 1200,
-        height: 630,
+        url: "https://omega-developer.maheshmuttintidev.in/banner.webp",
         alt: "Banner Image",
       },
     ],
