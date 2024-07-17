@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Mahesh Muttinti - Full Stack Web & Mobile App Developer",
     locale: "en",
     type: "website",
-    images: ["https://omega-developer.maheshmuttintidev.in/banner.webp"],
+    images: ["https://omega-developer.maheshmuttintidev.in/brand-banner.webp"],
   },
   twitter: {
     card: "summary_large_image",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description:
       "Omega Developer is none other than Mahesh Muttinti, He will share the youtube videos related to the Anime, React, React Native, Node Js, MongoDB, Postgresql, and more interesting contents.",
     creator: "@MaheshMuttinti",
-    images: ["https://omega-developer.maheshmuttintidev.in/banner.webp"],
+    images: ["https://omega-developer.maheshmuttintidev.in/brand-banner.webp"],
   },
 };
 
