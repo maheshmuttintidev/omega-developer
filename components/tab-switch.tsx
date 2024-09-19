@@ -1,5 +1,5 @@
-'use client';
-import React, { useEffect, useRef } from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 
 // Sample video data
@@ -65,33 +65,24 @@ const videos = [
   },
 ];
 
-// Parallax scrolling effect
-const useParallax = (ref: React.RefObject<HTMLDivElement>) => {
-  useEffect(() => {
-    const handleScroll = () => {
-      if (ref.current) {
-        const scrollPosition = window.pageYOffset;
-        ref.current.style.transform = `translateY(${scrollPosition * 0.3}px)`;
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [ref]);
-};
+const shorts = [
+  
+  {
+    title: "One Punch Man vs 100k Kung fu Pandas | #anime #onepunchman #kungfupanda",
+    url: "https://youtube.com/shorts/2LNYitE6nDk",
+    views: "No views info",
+    thumbnail:
+      "https://img.youtube.com/vi/2LNYitE6nDk/sddefault.jpg",
+  },
+];
 
-interface VideoCardProps {
+// Video Card Component
+const VideoCard: React.FC<{
   title: string;
   url: string;
   views: string;
   thumbnail: string;
-}
-
-const VideoCard: React.FC<VideoCardProps> = ({
-  title,
-  url,
-  views,
-  thumbnail,
-}) => (
+}> = ({ title, url, views, thumbnail }) => (
   <div className="bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
     <Image
       src={thumbnail}
@@ -114,25 +105,51 @@ const VideoCard: React.FC<VideoCardProps> = ({
   </div>
 );
 
- const Videos: React.FC = () => {
-  // const parallaxRef = useRef<HTMLDivElement>(null);
-  // useParallax(parallaxRef);
+export const Videos: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<"videos" | "shorts">("videos");
+
+  const handleTabClick = (tab: "videos" | "shorts") => {
+    setActiveTab(tab);
+  };
 
   return (
-    <div className="relative bg-red-500 text-white">
-      <div className="absolute top-0 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {videos.map((video, index) => (
-            <VideoCard
-              key={index}
-              title={video.title}
-              url={video.url}
-              views={video.views}
-              thumbnail={video.thumbnail}
-            />
-          ))}
-        </div>
+    <section className="container relative w-full min-h-screen p-4 text-white">
+      {/* Tabs for switching between Videos and Shorts */}
+      <div className="flex justify-center mb-6">
+        <button
+          className={`px-6 py-2 text-lg font-semibold ${
+            activeTab === "videos"
+              ? "text-teal-400 border-b-4 border-teal-400"
+              : "text-gray-500"
+          } transition-all duration-300`}
+          onClick={() => handleTabClick("videos")}
+        >
+          Videos
+        </button>
+        <button
+          className={`ml-4 px-6 py-2 text-lg font-semibold ${
+            activeTab === "shorts"
+              ? "text-teal-400 border-b-4 border-teal-400"
+              : "text-gray-500"
+          } transition-all duration-300`}
+          onClick={() => handleTabClick("shorts")}
+        >
+          Shorts
+        </button>
       </div>
-    </div>
+
+      {/* Video/Shorts Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {(activeTab === "videos" ? videos : shorts).map((video, index) => (
+          <VideoCard
+            key={index}
+            title={video.title}
+            url={video.url}
+            views={video.views}
+            thumbnail={video.thumbnail}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
